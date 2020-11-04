@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
 
@@ -16,6 +16,10 @@ export default function Header({ navigation, title }) {
                 style={styles.icon}
                 onPress={handleMenuIconPress}
             />
+            <Image
+                source={require("../assets/images/heart_logo.png")}
+                style={styles.headerImage}
+            />
             <Text style={styles.headerText}>{title}</Text>
         </View>
     );
@@ -27,6 +31,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
+    },
+    headerImage: {
+        width: 30,
+        height: 30,
+        marginRight: 20,
     },
     headerText: {
         fontWeight: "bold",

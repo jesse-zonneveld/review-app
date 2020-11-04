@@ -16,4 +16,9 @@ export const globalStyles = StyleSheet.create({
         marginVertical: 10,
         lineHeight: 20,
     },
+    errorMessage: {
+        color: "red",
+        fontWeight: "bold",
+        marginBottom: 10,
+    },
 });
